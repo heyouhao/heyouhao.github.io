@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Jon Henry 的博客</title>
+  <title>Tag: java | Jon Henry 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Jon Henry 的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/java/index.html">
 <meta property="og:site_name" content="Jon Henry 的博客">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
@@ -142,57 +142,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-190801-java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/08/01/190801-java/" class="archive-article-date">
+  	<time datetime="2019-08-01T06:17:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/01/190801-java/">java 元注解</a>
+      <a class="archive-article-title" href="/2019/08/01/190801-java/">java 元注解</a>
     </h1>
   
 
-        
-        <a href="/2019/08/01/190801-java/" class="archive-article-date">
-  	<time datetime="2019-08-01T06:17:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>java中元注解有四个： @Retention @Target @Document @Inherited；</p>
-<p>@Retention：注解的保留位置　　　　　　　　　<br>　@Retention(RetentionPolicy.SOURCE)   //注解仅存在于源码中，在class字节码文件中不包含<br>　@Retention(RetentionPolicy.CLASS)     // 默认的保留策略，注解会在class字节码文件中存在，但运行时无法获得，<br>　@Retention(RetentionPolicy.RUNTIME)  // 注解会在class字节码文件中存在，在运行时可以通过反射获取到</p>
-<p>　　<br>@Target:注解的作用目标<br>　@Target(ElementType.TYPE)   //接口、类、枚举、注解<br>　@Target(ElementType.FIELD) //字段、枚举的常量<br>　@Target(ElementType.METHOD) //方法<br>　@Target(ElementType.PARAMETER) //方法参数<br>　@Target(ElementType.CONSTRUCTOR)  //构造函数<br>　@Target(ElementType.LOCAL_VARIABLE)//局部变量<br>　@Target(ElementType.ANNOTATION_TYPE)//注解<br>　@Target(ElementType.PACKAGE) ///包   </p>
-<p>@Document：说明该注解将被包含在javadoc中</p>
-<p>@Inherited：说明子类可以继承父类中的该注解</p>
-<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><p>自定义AnnotationOne注解</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> annotations;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.ElementType;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Retention;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.RetentionPolicy;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Target;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Target</span>(ElementType.METHOD)</span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> AnnotationOne &#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">enum</span> ConStant&#123;One,Two&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function">ConStant <span class="title">testOne</span><span class="params">()</span> <span class="keyword">default</span> ConStant.One</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>自定义AnnotationTwo注解</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> annotations;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.ElementType;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Retention;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.RetentionPolicy;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Target;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Target</span>(ElementType.METHOD)</span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> AnnotationTwo &#123;</span><br><span class="line">	</span><br><span class="line">	<span class="function">String <span class="title">testTwo</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在接口IAnnotationTest中使用注解</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> annotations;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> annotations.AnnotationOne.ConStant;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IAnnotationTest</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@AnnotationOne</span>(testOne=ConStant.One)</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testOne</span><span class="params">(String name)</span></span>;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@AnnotationTwo</span>(testTwo=<span class="string">"field:two"</span>)</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testTwo</span><span class="params">(String name)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testThree</span><span class="params">(String name)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>通过反射测试注解</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> annotations;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Annotation;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnnotationMain</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Class&lt;IAnnotationTest&gt; ipt=IAnnotationTest.class;</span><br><span class="line">		Method[] mts=ipt.getMethods();</span><br><span class="line">		 <span class="keyword">for</span>(Method mt:mts)</span><br><span class="line">		&#123;</span><br><span class="line">			 System.out.println(<span class="string">"方法名: "</span> + mt.getName());</span><br><span class="line">		      Annotation[] ad = mt.getAnnotations();</span><br><span class="line">		      <span class="keyword">for</span>(Annotation temp : ad)&#123;</span><br><span class="line">		    	  <span class="keyword">if</span>(<span class="keyword">null</span> != temp)&#123;</span><br><span class="line">		    		  <span class="keyword">if</span>(temp <span class="keyword">instanceof</span> AnnotationOne)&#123;</span><br><span class="line">		    			  AnnotationOne one = (AnnotationOne)temp;</span><br><span class="line">		    			  System.out.println(<span class="string">"注解value:"</span>+ one.testOne());</span><br><span class="line">		    		  &#125;<span class="keyword">else</span> <span class="keyword">if</span>(temp <span class="keyword">instanceof</span> AnnotationTwo)&#123;</span><br><span class="line">		    			  AnnotationTwo two = (AnnotationTwo)temp;</span><br><span class="line">		    			  System.out.println(<span class="string">"注解value:"</span>+ two.testTwo());</span><br><span class="line">		    		  &#125;</span><br><span class="line">		    	  &#125;</span><br><span class="line">		      &#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>测试结果</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">方法名: testOne</span><br><span class="line">注解value:One</span><br><span class="line">方法名: testTwo</span><br><span class="line">注解value:field:two</span><br><span class="line">方法名: testThree</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-        <div class="article-pop-out tagcloud">
-          <i class="icon-tuding"></i>
-          <a class="article-tag-list-link color3">置顶</a>
-        </div>
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -204,41 +181,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/01/190801-java/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
+    </div></section>
+  
+
+    
 
 
           </div>
@@ -260,10 +215,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
