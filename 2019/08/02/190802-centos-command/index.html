@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/8 | Jon Henry 的博客</title>
+  <title>centOS 硬件信息查看 | Jon Henry 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Jon Henry 的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/08/index.html">
+  <meta name="description" content="1. 系统1.1 版本uname -a 能确认是64位还是32位，其它的信息不多 12[root@localhost ~]# uname -aLinux localhost.localdomain 2.6.32-431.el6.x86_64 #1 SMP Fri Nov 22 03:15:09 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux  more /etc/*">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="centOS 硬件信息查看">
+<meta property="og:url" content="http://yoursite.com/2019/08/02/190802-centos-command/index.html">
 <meta property="og:site_name" content="Jon Henry 的博客">
+<meta property="og:description" content="1. 系统1.1 版本uname -a 能确认是64位还是32位，其它的信息不多 12[root@localhost ~]# uname -aLinux localhost.localdomain 2.6.32-431.el6.x86_64 #1 SMP Fri Nov 22 03:15:09 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux  more /etc/*">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-02T00:39:39.925Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jon Henry 的博客">
+<meta name="twitter:title" content="centOS 硬件信息查看">
+<meta name="twitter:description" content="1. 系统1.1 版本uname -a 能确认是64位还是32位，其它的信息不多 12[root@localhost ~]# uname -aLinux localhost.localdomain 2.6.32-431.el6.x86_64 #1 SMP Fri Nov 22 03:15:09 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux  more /etc/*">
   
     <link rel="alternative" href="/atom.xml" title="Jon Henry 的博客" type="application/atom+xml">
   
@@ -140,78 +145,154 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-190802-centos-command" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/190802-centos-hadoop/" class="archive-article-date">
-  	<time datetime="2019-08-02T00:58:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/190802-centos-hadoop/">虚拟机Linux下 hadoop 环境搭建准备</a>
+    <h1 class="article-title" itemprop="name">
+      centOS 硬件信息查看
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/190802-centos-command/" class="archive-article-date">
+        
+        <a href="/2019/08/02/190802-centos-command/" class="archive-article-date">
   	<time datetime="2019-08-02T00:55:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/190802-centos-command/">centOS 硬件信息查看</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-系统"><a href="#1-系统" class="headerlink" title="1. 系统"></a>1. 系统</h2><h4 id="1-1-版本"><a href="#1-1-版本" class="headerlink" title="1.1 版本"></a>1.1 版本</h4><p>uname -a 能确认是64位还是32位，其它的信息不多</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# uname -a</span><br><span class="line">Linux localhost.localdomain 2.6.32-431.el6.x86_64 #1 SMP Fri Nov 22 03:15:09 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+<p>more /etc/*release 可以看到更多信息</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao ~]# more /etc/*release </span><br><span class="line">::::::::::::::</span><br><span class="line">/etc/centos-release</span><br><span class="line">::::::::::::::</span><br><span class="line">CentOS Linux release 7.4.1708 (Core) </span><br><span class="line">::::::::::::::</span><br><span class="line">/etc/os-release</span><br><span class="line">::::::::::::::</span><br><span class="line">NAME=&quot;CentOS Linux&quot;</span><br><span class="line">VERSION=&quot;7 (Core)&quot;</span><br><span class="line">ID=&quot;centos&quot;</span><br><span class="line">ID_LIKE=&quot;rhel fedora&quot;</span><br><span class="line">VERSION_ID=&quot;7&quot;</span><br><span class="line">PRETTY_NAME=&quot;CentOS Linux 7 (Core)&quot;</span><br><span class="line">ANSI_COLOR=&quot;0;31&quot;</span><br><span class="line">CPE_NAME=&quot;cpe:/o:centos:centos:7&quot;</span><br><span class="line">HOME_URL=&quot;https://www.centos.org/&quot;</span><br><span class="line">BUG_REPORT_URL=&quot;https://bugs.centos.org/&quot;</span><br><span class="line"></span><br><span class="line">CENTOS_MANTISBT_PROJECT=&quot;CentOS-7&quot;</span><br><span class="line">CENTOS_MANTISBT_PROJECT_VERSION=&quot;7&quot;</span><br><span class="line">REDHAT_SUPPORT_PRODUCT=&quot;centos&quot;</span><br><span class="line">REDHAT_SUPPORT_PRODUCT_VERSION=&quot;7&quot;</span><br><span class="line"></span><br><span class="line">::::::::::::::</span><br><span class="line">/etc/redhat-release</span><br><span class="line">::::::::::::::</span><br><span class="line">CentOS Linux release 7.4.1708 (Core) </span><br><span class="line">::::::::::::::</span><br><span class="line">/etc/system-release</span><br><span class="line">::::::::::::::</span><br><span class="line">CentOS Linux release 7.4.1708 (Core)</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-核数"><a href="#1-2-核数" class="headerlink" title="1.2 核数"></a>1.2 核数</h3><p>cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao ~]# cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c</span><br><span class="line">      2  Intel(R) Xeon(R) CPU E5-2682 v4 @ 2.50GHz</span><br></pre></td></tr></table></figure>
+
+<p>cat /proc/cpuinfo | grep physical | uniq -c</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao ~]# cat /proc/cpuinfo | grep physical | uniq -c</span><br><span class="line">      1 physical id	: 0</span><br><span class="line">      1 address sizes	: 46 bits physical, 48 bits virtual</span><br><span class="line">      1 physical id	: 0</span><br><span class="line">      1 address sizes	: 46 bits physical, 48 bits virtual</span><br></pre></td></tr></table></figure>
+
+<p> 由2个1核的CPU组成2核</p>
+<h3 id="1-3-运行模式"><a href="#1-3-运行模式" class="headerlink" title="1.3 运行模式"></a>1.3 运行模式</h3><p>getconf LONG_BIT  CPU运行在多少位模式下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao ~]# getconf LONG_BIT</span><br><span class="line">64</span><br></pre></td></tr></table></figure>
+
+<p>如果是32，说明当前CPU运行在32bit模式下, 但不代表CPU不支持64bit<br>cat /proc/cpuinfo | grep flags | grep ‘ lm ‘ | wc -l 是否支持64位</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao ~]# cat /proc/cpuinfo | grep flags | grep &apos; lm &apos; | wc -l </span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+
+<p>结果大于0, 说明支持64bit计算. lm指long mode, 支持lm则是64bit</p>
+<h3 id="1-4-计算机名"><a href="#1-4-计算机名" class="headerlink" title="1.4 计算机名"></a>1.4 计算机名</h3><p>hostname</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao ~]# hostname</span><br><span class="line">heyouhao</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-5-查看环境变量"><a href="#1-5-查看环境变量" class="headerlink" title="1.5 查看环境变量"></a>1.5 查看环境变量</h3><p>env</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">[root@heyouhao ~]# env</span><br><span class="line">XDG_SESSION_ID=10224</span><br><span class="line">HOSTNAME=heyouhao</span><br><span class="line">TERM=xterm</span><br><span class="line">SHELL=/bin/bash</span><br><span class="line">HISTSIZE=1000</span><br><span class="line">SSH_CLIENT=58.252.60.157 13291 22</span><br><span class="line">SSH_TTY=/dev/pts/1</span><br><span class="line">JRE_HOME=/usr/local/java/jdk1.8.0_152/jre</span><br><span class="line">MAIL=/var/spool/mail/root</span><br><span class="line">PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/usr/local/java/jdk1.8.0_152/bin:/usr/local/java/jdk1.8.0_152/jre/bin:/opt/gitlab/embedded/sbin/nginx:/root/bin</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-6-系统允许多长时间了-负载数"><a href="#1-6-系统允许多长时间了-负载数" class="headerlink" title="1.6 系统允许多长时间了/负载数"></a>1.6 系统允许多长时间了/负载数</h3><p>uptime</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao ~]# uptime</span><br><span class="line"> 10:41:27 up 60 days, 10:12,  1 user,  load average: 0.00, 0.01, 0.05</span><br></pre></td></tr></table></figure>
+
+<p>1.当前时间10:41:27<br>2.系统运行了多少时间,60days 10:12（60天10小时12分)<br>3.多少个用户,1 users<br>4.平均负载：0.00, 0.01, 0.05，最近1分钟、5分钟、15分钟系统的负载</p>
+<p>直接查看平均负载情况 cat /proc/loadavg</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao ~]# cat /proc/loadavg</span><br><span class="line">0.08 0.04 0.05 1/414 11179</span><br></pre></td></tr></table></figure>
+
+<p>除了前3个数字表示平均进程数量外，后面的1个分数，分母表示系统进程总数，分子表示正在运行的进程数；最后一个数字表示最近运行的进程ID</p>
+<h2 id="2-资源"><a href="#2-资源" class="headerlink" title="2. 资源"></a>2. 资源</h2><h3 id="2-1-内存"><a href="#2-1-内存" class="headerlink" title="2.1 内存"></a>2.1 内存</h3><p> cat /proc/meminfo 内存的详细信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao ~]#  cat /proc/meminfo</span><br><span class="line">MemTotal:        3881692 kB</span><br><span class="line">MemFree:          126160 kB</span><br><span class="line">MemAvailable:     265320 kB</span><br><span class="line">Buffers:           79860 kB</span><br><span class="line">Cached:           272776 kB</span><br><span class="line">SwapCached:        27088 kB</span><br><span class="line">Active:          2620216 kB</span><br></pre></td></tr></table></figure>
+
+<p>MemTotal总内存，MemFree可用内存<br>free -m(-m，单位是m，如果是-g，单位是g）查看可用内存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao ~]# free -m</span><br><span class="line">              total        used        free      shared  buff/cache   available</span><br><span class="line">Mem:           3790        3250         116          32         423         256</span><br><span class="line">Swap:          2047         325        1722</span><br></pre></td></tr></table></figure>
+
+<p>空闲内存total-used=free+buff/cache<br>我们通过free命令查看机器空闲内存时，会发现free的值很小。这主要是因为，在linux中有这么一种思想，内存不用白不用，因此它尽可能的cache和buffer一些数据，以方便下次使用。但实际上这些内存也是可以立刻拿来使用的。</p>
+<h2 id="3-磁盘和分区"><a href="#3-磁盘和分区" class="headerlink" title="3. 磁盘和分区"></a>3. 磁盘和分区</h2><h3 id="3-1-查看各分区使用情况"><a href="#3-1-查看各分区使用情况" class="headerlink" title="3.1 查看各分区使用情况"></a>3.1 查看各分区使用情况</h3><p>df -h</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao ~]# df -h</span><br><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/vda1        40G  8.2G   30G  22% /</span><br><span class="line">devtmpfs        1.9G     0  1.9G   0% /dev</span><br><span class="line">tmpfs           1.9G  4.0K  1.9G   1% /dev/shm</span><br><span class="line">tmpfs           1.9G  360K  1.9G   1% /run</span><br><span class="line">tmpfs           1.9G     0  1.9G   0% /sys/fs/cgroup</span><br><span class="line">tmpfs           380M     0  380M   0% /run/user/0</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-查看指定目录的大小"><a href="#3-2-查看指定目录的大小" class="headerlink" title="3.2 查看指定目录的大小"></a>3.2 查看指定目录的大小</h3><p>du -sh &lt;目录名&gt;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao local]# du -sh tomcat/</span><br><span class="line">220M	tomcat/</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-查看所有分区"><a href="#3-3-查看所有分区" class="headerlink" title="3.3 查看所有分区"></a>3.3 查看所有分区</h3><p>fdisk -l</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao local]#  fdisk -l</span><br><span class="line"></span><br><span class="line">Disk /dev/vda: 42.9 GB, 42949672960 bytes, 83886080 sectors</span><br><span class="line">Units = sectors of 1 * 512 = 512 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk label type: dos</span><br><span class="line">Disk identifier: 0x0008d73a</span><br><span class="line"></span><br><span class="line">   Device Boot      Start         End      Blocks   Id  System</span><br><span class="line">/dev/vda1   *        2048    83884031    41940992   83  Linux</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-4-查看所有交换分区"><a href="#3-4-查看所有交换分区" class="headerlink" title="3.4 查看所有交换分区"></a>3.4 查看所有交换分区</h3><p>swapon -s</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao local]# swapon -s</span><br><span class="line">Filename				Type		Size	Used	Priority</span><br><span class="line">/mnt/swap                              	file	2097148	333604	-1</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-网络"><a href="#4-网络" class="headerlink" title="4. 网络"></a>4. 网络</h2><h3 id="4-1-查看所有网络接口的属性"><a href="#4-1-查看所有网络接口的属性" class="headerlink" title="4.1 查看所有网络接口的属性"></a>4.1 查看所有网络接口的属性</h3><p>ifconfig</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao local]# ifconfig</span><br><span class="line">eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500</span><br><span class="line">        inet 172.18.56.232  netmask 255.255.240.0  broadcast 172.18.63.255</span><br><span class="line">        ether 00:16:3e:04:4a:da  txqueuelen 1000  (Ethernet)</span><br><span class="line">        RX packets 2846405  bytes 626223429 (597.2 MiB)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 3581982  bytes 1494945222 (1.3 GiB)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br><span class="line"></span><br><span class="line">lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536</span><br><span class="line">        inet 127.0.0.1  netmask 255.0.0.0</span><br><span class="line">        loop  txqueuelen 1  (Local Loopback)</span><br><span class="line">        RX packets 51065350  bytes 47522440520 (44.2 GiB)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 51065350  bytes 47522440520 (44.2 GiB)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-带宽"><a href="#4-2-带宽" class="headerlink" title="4.2 带宽"></a>4.2 带宽</h3><p>ethtool 网卡名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ethtool eth0</span><br><span class="line">Settings for eth0:</span><br><span class="line">	Supported ports: [ TP ]</span><br><span class="line">	Supported link modes:   1000baseT/Full </span><br><span class="line">	                        10000baseT/Full </span><br><span class="line">	Supported pause frame use: No</span><br><span class="line">	Supports auto-negotiation: No</span><br><span class="line">	Advertised link modes:  Not reported</span><br><span class="line">	Advertised pause frame use: No</span><br><span class="line">	Advertised auto-negotiation: No</span><br><span class="line">	Speed: 10000Mb/s</span><br><span class="line">	Duplex: Full</span><br><span class="line">	Port: Twisted Pair</span><br><span class="line">	PHYAD: 0</span><br><span class="line">	Transceiver: internal</span><br><span class="line">	Auto-negotiation: off</span><br><span class="line">	MDI-X: Unknown</span><br><span class="line">	Supports Wake-on: uag</span><br><span class="line">	Wake-on: d</span><br><span class="line">	Link detected: yes</span><br></pre></td></tr></table></figure>
+
+<p>看Speed</p>
+<h3 id="4-3-查看路由表"><a href="#4-3-查看路由表" class="headerlink" title="4.3 查看路由表"></a>4.3 查看路由表</h3><p>route -n</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]#  route -n</span><br><span class="line">Kernel IP routing table</span><br><span class="line">Destination     Gateway         Genmask         Flags Metric Ref    Use Iface</span><br><span class="line">192.172.19.0    0.0.0.0         255.255.255.0   U     0      0        0 eth0</span><br><span class="line">169.254.0.0     0.0.0.0         255.255.0.0     U     1002   0        0 eth0</span><br><span class="line">0.0.0.0         192.172.19.254  0.0.0.0         UG    0      0        0 eth0</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-4-查看所有监听端口"><a href="#4-4-查看所有监听端口" class="headerlink" title="4.4 查看所有监听端口"></a>4.4 查看所有监听端口</h3><p>netstat -lntp</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao local]# netstat -lntp</span><br><span class="line">Active Internet connections (only servers)</span><br><span class="line">Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    </span><br><span class="line">tcp        0      0 127.0.0.1:9100          0.0.0.0:*               LISTEN      530/node_exporter   </span><br><span class="line">tcp        0      0 127.0.0.1:8080          0.0.0.0:*               LISTEN      864/unicorn master  </span><br><span class="line">tcp        0      0 127.0.0.1:9168          0.0.0.0:*               LISTEN      522/ruby</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-5-查看所有已经建立的连接"><a href="#4-5-查看所有已经建立的连接" class="headerlink" title="4.5 查看所有已经建立的连接"></a>4.5 查看所有已经建立的连接</h3><p>netstat -antp</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao local]# netstat -antp</span><br><span class="line">Active Internet connections (servers and established)</span><br><span class="line">Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    </span><br><span class="line">tcp        0      0 127.0.0.1:9100          0.0.0.0:*               LISTEN      530/node_exporter   </span><br><span class="line">tcp        0      0 127.0.0.1:8080          0.0.0.0:*               LISTEN      864/unicorn master  </span><br><span class="line">tcp        0      0 127.0.0.1:9168          0.0.0.0:*               LISTEN      522/ruby</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-6-某端口使用情况"><a href="#4-6-某端口使用情况" class="headerlink" title="4.6 某端口使用情况"></a>4.6 某端口使用情况</h3><p>lsof -i:端口号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">没有安装</span><br></pre></td></tr></table></figure>
+
+<p>或者<br>netstat -apn|grep 端口号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao local]# netstat -apn|grep 8081</span><br><span class="line">tcp        0      0 0.0.0.0:8081            0.0.0.0:*               LISTEN      10575/java</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-进程"><a href="#5-进程" class="headerlink" title="5. 进程"></a>5. 进程</h2><h3 id="5-1-查看所有进程"><a href="#5-1-查看所有进程" class="headerlink" title="5.1 查看所有进程"></a>5.1 查看所有进程</h3><p>ps -ef,使用ps -ef|gerp tomcat过滤</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao local]# ps -ef|grep tomcat</span><br><span class="line">root     10575     1  0 Aug07 ?        01:27:11 /usr/local/java/jdk1.8.0_152/jre/bin/java -Djava.util.logging.config.file=/usr/local/tomcat/apache-tomcat-8.5.24/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager</span><br><span class="line">root     13621  6024  0 11:06 pts/1    00:00:00 grep --color=auto tomcat</span><br></pre></td></tr></table></figure>
+
+<p>ps -aux可以看到进程占用CPU,内存情况</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao local]# ps -aux</span><br><span class="line">USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND</span><br><span class="line">root         1  0.0  0.0  43264  2180 ?        Ss   Aug01   0:31 /usr/lib/systemd/systemd --switched-root --system --deserialize 21</span><br><span class="line">root         2  0.0  0.0      0     0 ?        S    Aug01   0:00 [kthreadd]</span><br><span class="line">root         3  0.0  0.0      0     0 ?        S    Aug01   0:07 [ksoftirqd/0]</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-实时显示进程状态"><a href="#5-2-实时显示进程状态" class="headerlink" title="5.2 实时显示进程状态"></a>5.2 实时显示进程状态</h3><p>top</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@heyouhao local]# top</span><br><span class="line">top - 11:09:02 up 60 days, 10:40,  1 user,  load average: 0.00, 0.01, 0.05</span><br><span class="line">Tasks: 180 total,   1 running, 179 sleeping,   0 stopped,   0 zombie</span><br><span class="line">%Cpu(s):  1.2 us,  0.2 sy,  0.0 ni, 98.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st</span><br><span class="line">KiB Mem :  3881692 total,   111144 free,  3331120 used,   439428 buff/cache</span><br><span class="line">KiB Swap:  2097148 total,  1763544 free,   333604 used.   246192 avail Mem </span><br><span class="line"></span><br><span class="line">  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                                                                                                                                                    </span><br><span class="line">  534 gitlab-+  20   0  730620 109304   4960 S   1.7  2.8 586:31.62 prometheus                                                                                                                                                 </span><br><span class="line">  535 git       20   0  858816 529380   1516 S   0.7 13.6 598:38.91 bundle                                                                                                                                                                                                                                                                                                                                                                                                                                                   </span><br><span class="line">13808 root      20   0  157724   2284   1548 R   0.3  0.1   0:00.02 top                                                                                                                                                        </span><br><span class="line">    1 root      20   0   43264   2180   1304 S   0.0  0.1   0:31.03 systemd</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-用户"><a href="#6-用户" class="headerlink" title="6. 用户"></a>6. 用户</h2><h3 id="6-1-查看活动用户"><a href="#6-1-查看活动用户" class="headerlink" title="6.1 查看活动用户"></a>6.1 查看活动用户</h3><p>w</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# w</span><br><span class="line"> 11:10:50 up 23:03,  5 users,  load average: 0.00, 0.00, 0.00</span><br><span class="line">USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU WHAT</span><br><span class="line">root     pts/0    192.172.19.206   08:03   40:33  60.88s  0.10s -bash</span><br><span class="line">root     pts/2    192.172.19.206   08:03    1:56m  0.06s  0.00s tail -f retail_error.log</span><br><span class="line">root     pts/3    192.172.31.53    08:22    2:33m  0.10s  0.10s -bash</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-查看指定用户的信息"><a href="#6-2-查看指定用户的信息" class="headerlink" title="6.2 查看指定用户的信息"></a>6.2 查看指定用户的信息</h3><p>id &lt;用户名&gt;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# id root</span><br><span class="line">uid=0(root) gid=0(root) 组=0(root)</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-3-查看用户登录日志"><a href="#6-3-查看用户登录日志" class="headerlink" title="6.3 查看用户登录日志"></a>6.3 查看用户登录日志</h3><p>last</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">uid=0(root) gid=0(root) 组=0(root)</span><br><span class="line">[root@localhost ~]# last </span><br><span class="line">root     pts/3        192.172.31.53    Sun Sep 30 08:22   still logged in   </span><br><span class="line">root     pts/2        192.172.19.206   Sun Sep 30 08:03   still logged in      </span><br><span class="line">root     pts/1        192.172.31.53    Sat Sep 29 13:49 - 14:04  (00:14)    </span><br><span class="line">root     pts/0        192.172.56.3     Sat Sep 29 11:59 - 15:22  (03:22)    </span><br><span class="line">reboot   system boot  2.6.32-431.el6.x Sat Sep 29 11:57 - 11:11  (23:13)</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-4-查看系统所有用户"><a href="#6-4-查看系统所有用户" class="headerlink" title="6.4 查看系统所有用户"></a>6.4 查看系统所有用户</h3><p>cut -d: -f1 /etc/passwd</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# </span><br><span class="line">[root@localhost ~]# cut -d: -f1 /etc/passwd</span><br><span class="line">root</span><br><span class="line">bin</span><br><span class="line">daemon</span><br><span class="line">adm</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">参考：https://blog.csdn.net/dream_broken/article/details/52883883</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -223,251 +304,115 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/02/190802-centos-command/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/190802-hadoop-designPatterns/" class="archive-article-date">
-  	<time datetime="2019-08-02T00:35:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/08/02/190802-centos-hadoop/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          虚拟机Linux下 hadoop 环境搭建准备
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/02/190802-hadoop-designPatterns/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">设计模式六大原则</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/190802-hadoop-designPatterns/">设计模式六大原则</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/190802-hadoop-compile/" class="archive-article-date">
-  	<time datetime="2019-08-02T00:30:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/190802-hadoop-compile/">编译 Hadoop 2.x 源码</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/190802-hadoop-pseudo/" class="archive-article-date">
-  	<time datetime="2019-08-02T00:25:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/190802-hadoop-pseudo/">Hadoop2.x伪分布式环境搭建</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/01/190801-spring-mvc/" class="archive-article-date">
-  	<time datetime="2019-08-01T09:53:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/01/190801-spring-mvc/">SpringMVC利用AOP实现自定义注解记录日志</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">spring mvc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/01/190801-eclipse-tags/" class="archive-article-date">
-  	<time datetime="2019-08-01T05:25:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/01/190801-eclipse-tags/">eclipse 标记任务</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">eclipse</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/01/190801-java/" class="archive-article-date">
-  	<time datetime="2019-08-01T05:17:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/01/190801-java/">java 元注解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -490,8 +435,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

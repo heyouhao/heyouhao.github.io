@@ -6,15 +6,50 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/8 | Jon Henry 的博客</title>
+  <title>Hadoop2.x伪分布式环境搭建 | Jon Henry 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Jon Henry 的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/08/index.html">
+  <meta name="description" content="1） hadoop 环境准备测试:a. ip地址">
+<meta name="keywords" content="hadoop">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hadoop2.x伪分布式环境搭建">
+<meta property="og:url" content="http://yoursite.com/2019/08/02/190802-hadoop-pseudo/index.html">
 <meta property="og:site_name" content="Jon Henry 的博客">
+<meta property="og:description" content="1） hadoop 环境准备测试:a. ip地址">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/kkfumo7v65r5mm1qzs12a4df/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/lgduz292bw4e00mhpdip7d6j/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/q3shvas97xh39zz22u5oqjxm/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/hvebf71f2l0ik9ykkryr40b4/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/u1zxtsz1a0vrh39tbnok0dib/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/jzll884worji8fgmcfcc6om3/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/bvow23vs4evul5ty3xidl7cf/2.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/mcc55n0ty3odiiwfpdfvwdsa/4.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/ksuttqcswpczgmxnm9tmua7j/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/vnmjt8nsa1y0wgwnlgg55864/2.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/y9phcrbyoo6mq0hjn3gj3vt2/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/bckpgh4e1v8o7ywvl20p1hzi/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/c9sokqczjrdzdev9f8o7ftpn/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/loueacz86wdjomesjeh07yx5/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/cjw6dgpgwgimzt4enyhgrg85/2.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/5ic4an19mtsufsxtmhg6a5ex/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/hqw2d8bpf98ydj0eh21643x5/2.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/9f3k2fjuzlgacr5dwv9nudta/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/0ec9jttg1l3iz0euo9kwznn1/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/mgygpwu7njsslbqepxfay78z/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/o0qcr8pyfguxyvvsqpbahay2/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/8yfehaowbfvdezzquaotbgau/2.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/rvsp0h14f13imx66bvb8ckvj/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/fezvs2pq2jhi97j3ly3zdx47/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/ptw02hdt9z04cx01qm36bkv6/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/hqngs6wr92ct6dn18r0oua0g/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/urmmox07pdma758lnvl3mvw7/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/vkurklajj4r4u6qrni1iz397/1.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/myouhao/oy74go8zqqb9gocn9wi712d1/1.jpg">
+<meta property="og:updated_time" content="2019-08-02T00:27:29.158Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jon Henry 的博客">
+<meta name="twitter:title" content="Hadoop2.x伪分布式环境搭建">
+<meta name="twitter:description" content="1） hadoop 环境准备测试:a. ip地址">
+<meta name="twitter:image" content="http://static.zybuluo.com/myouhao/kkfumo7v65r5mm1qzs12a4df/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Jon Henry 的博客" type="application/atom+xml">
   
@@ -140,192 +175,123 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-190802-hadoop-pseudo" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/190802-centos-hadoop/" class="archive-article-date">
-  	<time datetime="2019-08-02T00:58:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/190802-centos-hadoop/">虚拟机Linux下 hadoop 环境搭建准备</a>
+    <h1 class="article-title" itemprop="name">
+      Hadoop2.x伪分布式环境搭建
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/190802-centos-command/" class="archive-article-date">
-  	<time datetime="2019-08-02T00:55:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/190802-centos-command/">centOS 硬件信息查看</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/190802-hadoop-designPatterns/" class="archive-article-date">
-  	<time datetime="2019-08-02T00:35:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/190802-hadoop-designPatterns/">设计模式六大原则</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/190802-hadoop-compile/" class="archive-article-date">
-  	<time datetime="2019-08-02T00:30:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/190802-hadoop-compile/">编译 Hadoop 2.x 源码</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/190802-hadoop-pseudo/" class="archive-article-date">
+        
+        <a href="/2019/08/02/190802-hadoop-pseudo/" class="archive-article-date">
   	<time datetime="2019-08-02T00:25:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/190802-hadoop-pseudo/">Hadoop2.x伪分布式环境搭建</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1）-hadoop-环境准备测试"><a href="#1）-hadoop-环境准备测试" class="headerlink" title="1） hadoop 环境准备测试:"></a>1） hadoop 环境准备测试:</h3><h4 id="a-ip地址"><a href="#a-ip地址" class="headerlink" title="a. ip地址"></a>a. ip地址</h4><p><img src="http://static.zybuluo.com/myouhao/kkfumo7v65r5mm1qzs12a4df/1.jpg" alt="1.jpg-98.6kB"></p>
+<a id="more"></a>
+<h4 id="b-ping通外网"><a href="#b-ping通外网" class="headerlink" title="b. ping通外网"></a>b. ping通外网</h4><p><img src="http://static.zybuluo.com/myouhao/lgduz292bw4e00mhpdip7d6j/1.jpg" alt="1.jpg-66.9kB"></p>
+<h4 id="c-主机名"><a href="#c-主机名" class="headerlink" title="c. 主机名"></a>c. 主机名</h4><p><img src="http://static.zybuluo.com/myouhao/q3shvas97xh39zz22u5oqjxm/1.jpg" alt="1.jpg-10.7kB"></p>
+<h4 id="d-关闭防火墙"><a href="#d-关闭防火墙" class="headerlink" title="d. 关闭防火墙"></a>d. 关闭防火墙</h4><p><img src="http://static.zybuluo.com/myouhao/hvebf71f2l0ik9ykkryr40b4/1.jpg" alt="1.jpg-32.7kB"></p>
+<h4 id="f-创建hadoop目录"><a href="#f-创建hadoop目录" class="headerlink" title="f. 创建hadoop目录"></a>f. 创建hadoop目录</h4><p><img src="http://static.zybuluo.com/myouhao/u1zxtsz1a0vrh39tbnok0dib/1.jpg" alt="1.jpg-56.3kB"></p>
+<h4 id="g-jdk环境配置"><a href="#g-jdk环境配置" class="headerlink" title="g. jdk环境配置"></a>g. jdk环境配置</h4><h5 id="查看系统jdk"><a href="#查看系统jdk" class="headerlink" title="查看系统jdk"></a>查看系统jdk</h5><p><img src="http://static.zybuluo.com/myouhao/jzll884worji8fgmcfcc6om3/1.jpg" alt="1.jpg-24.8kB"></p>
+<h5 id="卸载jdk"><a href="#卸载jdk" class="headerlink" title="卸载jdk"></a>卸载jdk</h5><p><img src="http://static.zybuluo.com/myouhao/bvow23vs4evul5ty3xidl7cf/2.jpg" alt="2.jpg-23.9kB"></p>
+<h5 id="安装jdk"><a href="#安装jdk" class="headerlink" title="安装jdk"></a>安装jdk</h5><p><img src="http://static.zybuluo.com/myouhao/mcc55n0ty3odiiwfpdfvwdsa/4.jpg" alt="4.jpg-11.1kB"></p>
+<h5 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h5><p><img src="http://static.zybuluo.com/myouhao/ksuttqcswpczgmxnm9tmua7j/1.jpg" alt="1.jpg-28.6kB"></p>
+<h5 id="刷新测试"><a href="#刷新测试" class="headerlink" title="刷新测试"></a>刷新测试</h5><p><img src="http://static.zybuluo.com/myouhao/vnmjt8nsa1y0wgwnlgg55864/2.jpg" alt="2.jpg-32.5kB"></p>
+<h3 id="2）-HDFS-配置、-启动命令、-测试命令"><a href="#2）-HDFS-配置、-启动命令、-测试命令" class="headerlink" title="2） HDFS 配置、 启动命令、 测试命令"></a>2） HDFS 配置、 启动命令、 测试命令</h3><h4 id="a-HDFS配置"><a href="#a-HDFS配置" class="headerlink" title="a. HDFS配置"></a>a. HDFS配置</h4><h5 id="解压hadoop压缩文件"><a href="#解压hadoop压缩文件" class="headerlink" title="解压hadoop压缩文件"></a>解压hadoop压缩文件</h5><p><img src="http://static.zybuluo.com/myouhao/y9phcrbyoo6mq0hjn3gj3vt2/1.jpg" alt="1.jpg-11.1kB"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@pseudo opt]$ tar -zxvf /opt/softwares/hadoop-2.5.0.tar.gz -C /opt/modules/hadoop/</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+<h5 id="修改hadoop-env-sh，yarn-env-sh，mapred-env-sh配置文件，加入以下代码"><a href="#修改hadoop-env-sh，yarn-env-sh，mapred-env-sh配置文件，加入以下代码" class="headerlink" title="修改hadoop-env.sh，yarn-env.sh，mapred-env.sh配置文件，加入以下代码"></a>修改hadoop-env.sh，yarn-env.sh，mapred-env.sh配置文件，加入以下代码</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/opt/modules/jdk1.7.0_67</span><br></pre></td></tr></table></figure>
+
+<p>hadoop-env.sh 额外修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export HADOOP_PREFIX=/opt/modules/hadoop/hadoop-2.5.0</span><br><span class="line">export HADOOP_CONF_DIR=/opt/modules/hadoop/hadoop-2.5.0/etc/hadoop</span><br></pre></td></tr></table></figure>
+
+<h5 id="修改core-site-xml配置文件-如下显示"><a href="#修改core-site-xml配置文件-如下显示" class="headerlink" title="修改core-site.xml配置文件,如下显示"></a>修改core-site.xml配置文件,如下显示</h5><p><img src="http://static.zybuluo.com/myouhao/bckpgh4e1v8o7ywvl20p1hzi/1.jpg" alt="1.jpg-38.6kB"></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">	    <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.defaultFS<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">	    <span class="tag">&lt;<span class="name">value</span>&gt;</span>hdfs://pseudo:8020<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.tmp.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">value</span>&gt;</span>/opt/modules/hadoop-2.5.0/data/tmp<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="修改hdfs-site-xml配置文件-如下显示"><a href="#修改hdfs-site-xml配置文件-如下显示" class="headerlink" title="修改hdfs-site.xml配置文件,如下显示"></a>修改hdfs-site.xml配置文件,如下显示</h5><p><img src="http://static.zybuluo.com/myouhao/c9sokqczjrdzdev9f8o7ftpn/1.jpg" alt="1.jpg-17.8kB"></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">value</span>&gt;</span>1<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="首次启动hadoop格式化namenode"><a href="#首次启动hadoop格式化namenode" class="headerlink" title="首次启动hadoop格式化namenode"></a>首次启动hadoop格式化namenode</h5><p><img src="http://static.zybuluo.com/myouhao/loueacz86wdjomesjeh07yx5/1.jpg" alt="1.jpg-7.4kB"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@pseudo hadoop-2.5.0]$ bin/hdfs namenode -format</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://static.zybuluo.com/myouhao/cjw6dgpgwgimzt4enyhgrg85/2.jpg" alt="2.jpg-99kB"></p>
+<h4 id="b-启动命令"><a href="#b-启动命令" class="headerlink" title="b. 启动命令"></a>b. 启动命令</h4><h5 id="启动namenode"><a href="#启动namenode" class="headerlink" title="启动namenode"></a>启动namenode</h5><p><img src="http://static.zybuluo.com/myouhao/5ic4an19mtsufsxtmhg6a5ex/1.jpg" alt="1.jpg-22kB"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@pseudo hadoop-2.5.0]$ sbin/hadoop-daemon.sh start namenode</span><br></pre></td></tr></table></figure>
+
+<h5 id="启动datanode"><a href="#启动datanode" class="headerlink" title="启动datanode"></a>启动datanode</h5><p><img src="http://static.zybuluo.com/myouhao/hqw2d8bpf98ydj0eh21643x5/2.jpg" alt="2.jpg-24.6kB"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@pseudo hadoop-2.5.0]$ sbin/hadoop-daemon.sh start datanode</span><br></pre></td></tr></table></figure>
+
+<h4 id="c-测试命令"><a href="#c-测试命令" class="headerlink" title="c. 测试命令"></a>c. 测试命令</h4><p><img src="http://static.zybuluo.com/myouhao/9f3k2fjuzlgacr5dwv9nudta/1.jpg" alt="1.jpg-14.2kB"></p>
+<p><img src="http://static.zybuluo.com/myouhao/0ec9jttg1l3iz0euo9kwznn1/1.jpg" alt="1.jpg-66.9kB"></p>
+<h3 id="3）-YARN-配置、-启动命令、-WEB-UI-页面"><a href="#3）-YARN-配置、-启动命令、-WEB-UI-页面" class="headerlink" title="3） YARN 配置、 启动命令、 WEB UI 页面"></a>3） YARN 配置、 启动命令、 WEB UI 页面</h3><h4 id="a-YARN-配置"><a href="#a-YARN-配置" class="headerlink" title="a. YARN 配置"></a>a. YARN 配置</h4><h5 id="修改yarn-site-xml配置文件-如下显示"><a href="#修改yarn-site-xml配置文件-如下显示" class="headerlink" title="修改yarn-site.xml配置文件,如下显示"></a>修改yarn-site.xml配置文件,如下显示</h5><p><img src="http://static.zybuluo.com/myouhao/mgygpwu7njsslbqepxfay78z/1.jpg" alt="1.jpg-48kB"></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- Site specific YARN configuration properties --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.aux-services<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">value</span>&gt;</span>mapreduce_shuffle<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">	</span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.hostname<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">value</span>&gt;</span>pseudo<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="b-启动命令-1"><a href="#b-启动命令-1" class="headerlink" title="b. 启动命令"></a>b. 启动命令</h4><h5 id="启动resourcemanager"><a href="#启动resourcemanager" class="headerlink" title="启动resourcemanager"></a>启动resourcemanager</h5><p><img src="http://static.zybuluo.com/myouhao/o0qcr8pyfguxyvvsqpbahay2/1.jpg" alt="1.jpg-27.3kB"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@pseudo hadoop-2.5.0]$ sbin/yarn-daemon.sh start resourcemanager</span><br></pre></td></tr></table></figure>
+
+<h5 id="启动nodemanager"><a href="#启动nodemanager" class="headerlink" title="启动nodemanager"></a>启动nodemanager</h5><p><img src="http://static.zybuluo.com/myouhao/8yfehaowbfvdezzquaotbgau/2.jpg" alt="2.jpg-27.8kB"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@pseudo hadoop-2.5.0]$ sbin/yarn-daemon.s start nodemanager</span><br></pre></td></tr></table></figure>
+
+<h4 id="c-WEB-UI-页面"><a href="#c-WEB-UI-页面" class="headerlink" title="c. WEB UI 页面"></a>c. WEB UI 页面</h4><p><img src="http://static.zybuluo.com/myouhao/rvsp0h14f13imx66bvb8ckvj/1.jpg" alt="1.jpg-62.5kB"></p>
+<h3 id="4）-MapReduce-配置、-案例-WordCount-测试运行、-如何提交-Job、查看运行结果"><a href="#4）-MapReduce-配置、-案例-WordCount-测试运行、-如何提交-Job、查看运行结果" class="headerlink" title="4） MapReduce 配置、 案例 WordCount 测试运行、 如何提交 Job、查看运行结果"></a>4） MapReduce 配置、 案例 WordCount 测试运行、 如何提交 Job、查看运行结果</h3><h4 id="a-MapReduce-配置"><a href="#a-MapReduce-配置" class="headerlink" title="a. MapReduce 配置"></a>a. MapReduce 配置</h4><h5 id="将mapred-site-xml-template复制为mapred-site-xml配置文件-如下显示"><a href="#将mapred-site-xml-template复制为mapred-site-xml配置文件-如下显示" class="headerlink" title="将mapred-site.xml.template复制为mapred-site.xml配置文件,如下显示"></a>将mapred-site.xml.template复制为mapred-site.xml配置文件,如下显示</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@pseudo hadoop]$ cp mapred-site.xml.template mapred-site.xml</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://static.zybuluo.com/myouhao/fezvs2pq2jhi97j3ly3zdx47/1.jpg" alt="1.jpg-20.9kB"></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.framework.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">value</span>&gt;</span>yarn<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="b-案例-WordCount-测试运行"><a href="#b-案例-WordCount-测试运行" class="headerlink" title="b. 案例 WordCount 测试运行"></a>b. 案例 WordCount 测试运行</h4><h5 id="创建input文件并在hdfs上创建-user-hadoop目录"><a href="#创建input文件并在hdfs上创建-user-hadoop目录" class="headerlink" title="创建input文件并在hdfs上创建/user/hadoop目录"></a>创建input文件并在hdfs上创建/user/hadoop目录</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@pseudo ~]$ touch input</span><br><span class="line">[hadoop@pseudo ~]$ cat input </span><br><span class="line">hello hadoop</span><br><span class="line">hadoop hello</span><br><span class="line">hello heyouhao</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://static.zybuluo.com/myouhao/ptw02hdt9z04cx01qm36bkv6/1.jpg" alt="1.jpg-67.3kB"></p>
+<h5 id="将文件上传到hdfs上并查看input文件"><a href="#将文件上传到hdfs上并查看input文件" class="headerlink" title="将文件上传到hdfs上并查看input文件"></a>将文件上传到hdfs上并查看input文件</h5><p><img src="http://static.zybuluo.com/myouhao/hqngs6wr92ct6dn18r0oua0g/1.jpg" alt="1.jpg-121kB"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@pseudo hadoop-2.5.0]$ bin/hdfs dfs -put /home/hadoop/input /user/hadoop</span><br><span class="line">[hadoop@pseudo hadoop-2.5.0]$ bin/hdfs dfs -ls /user/hadoop</span><br></pre></td></tr></table></figure>
+
+<h4 id="c-提交-Job"><a href="#c-提交-Job" class="headerlink" title="c. 提交 Job"></a>c. 提交 Job</h4><p><img src="http://static.zybuluo.com/myouhao/urmmox07pdma758lnvl3mvw7/1.jpg" alt="1.jpg-22.6kB"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@pseudo hadoop-2.5.0]$ bin/yarn jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.5.0.jar wordcount /user/hadoop/input /user/hadoop/output</span><br></pre></td></tr></table></figure>
+
+<h4 id="d-查看运行结果"><a href="#d-查看运行结果" class="headerlink" title="d. 查看运行结果"></a>d. 查看运行结果</h4><h5 id="代码查看"><a href="#代码查看" class="headerlink" title="代码查看"></a>代码查看</h5><p><img src="http://static.zybuluo.com/myouhao/vkurklajj4r4u6qrni1iz397/1.jpg" alt="1.jpg-78.2kB"></p>
+<h5 id="hdfs上文件查看"><a href="#hdfs上文件查看" class="headerlink" title="hdfs上文件查看"></a>hdfs上文件查看</h5><p><img src="http://static.zybuluo.com/myouhao/oy74go8zqqb9gocn9wi712d1/1.jpg" alt="1.jpg-128.6kB"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@pseudo hadoop-2.5.0]$ bin/hdfs dfs -ls /user/hadoop/output</span><br><span class="line">[hadoop@pseudo hadoop-2.5.0]$  bin/hdfs dfs -cat /user/hadoop/output/part-r-00000</span><br></pre></td></tr></table></figure>
+
+<h3 id="5）-根据自己理解的-HDFS、-YARN-及-MapReduce-功能进行描述"><a href="#5）-根据自己理解的-HDFS、-YARN-及-MapReduce-功能进行描述" class="headerlink" title="5） 根据自己理解的 HDFS、 YARN 及 MapReduce 功能进行描述"></a>5） 根据自己理解的 HDFS、 YARN 及 MapReduce 功能进行描述</h3><p>HDFS：hdfs是分布式文件系统，主要用于hadoop的文件存储，分布在不同的廉价机器上,主(namenode)从(datanode)架构，文件以block块的形式存储在datanode上，由namenode记录元数据信息，每台机器ip对应的datanode以及每台datanode是否可用等信息。</p>
+<p>YARN：yarn是一个资源管理以及任务调度者，同样主(ResourceManager)从(NodeManager)架构，由客户端提交任务给ResourceManager，由ResourceManager分配到相应的NodeManager节点上的ApplicationMaster应用程序处理。</p>
+<p>MapReduce：mapReduce是一个离线批处理计算框架，分为3个阶段处理，map、shuffle、reduce，由多个map同步处理任务，在通过shuffle交给reduce整合处理。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -337,137 +303,115 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/02/190802-hadoop-pseudo/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/01/190801-spring-mvc/" class="archive-article-date">
-  	<time datetime="2019-08-01T09:53:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/08/02/190802-hadoop-compile/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          编译 Hadoop 2.x 源码
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/01/190801-spring-mvc/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SpringMVC利用AOP实现自定义注解记录日志</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/01/190801-spring-mvc/">SpringMVC利用AOP实现自定义注解记录日志</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">spring mvc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/01/190801-eclipse-tags/" class="archive-article-date">
-  	<time datetime="2019-08-01T05:25:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/01/190801-eclipse-tags/">eclipse 标记任务</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">eclipse</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/01/190801-java/" class="archive-article-date">
-  	<time datetime="2019-08-01T05:17:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/01/190801-java/">java 元注解</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -490,8 +434,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

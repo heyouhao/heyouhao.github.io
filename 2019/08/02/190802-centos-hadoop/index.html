@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/8 | Jon Henry 的博客</title>
+  <title>虚拟机Linux下 hadoop 环境搭建准备 | Jon Henry 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Jon Henry 的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/08/index.html">
+  <meta name="description" content="主机名修改及映射a. 修改当时生效1hostname heyouhao  b. 修改后重启生效1vi /etc/sysconfig/network">
+<meta name="keywords" content="linux,hadoop">
+<meta property="og:type" content="article">
+<meta property="og:title" content="虚拟机Linux下 hadoop 环境搭建准备">
+<meta property="og:url" content="http://yoursite.com/2019/08/02/190802-centos-hadoop/index.html">
 <meta property="og:site_name" content="Jon Henry 的博客">
+<meta property="og:description" content="主机名修改及映射a. 修改当时生效1hostname heyouhao  b. 修改后重启生效1vi /etc/sysconfig/network">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-02T00:40:38.939Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jon Henry 的博客">
+<meta name="twitter:title" content="虚拟机Linux下 hadoop 环境搭建准备">
+<meta name="twitter:description" content="主机名修改及映射a. 修改当时生效1hostname heyouhao  b. 修改后重启生效1vi /etc/sysconfig/network">
   
     <link rel="alternative" href="/atom.xml" title="Jon Henry 的博客" type="application/atom+xml">
   
@@ -140,36 +145,99 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-190802-centos-hadoop" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      虚拟机Linux下 hadoop 环境搭建准备
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/190802-centos-hadoop/" class="archive-article-date">
+
+        
+        <a href="/2019/08/02/190802-centos-hadoop/" class="archive-article-date">
   	<time datetime="2019-08-02T00:58:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/190802-centos-hadoop/">虚拟机Linux下 hadoop 环境搭建准备</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="主机名修改及映射"><a href="#主机名修改及映射" class="headerlink" title="主机名修改及映射"></a>主机名修改及映射</h3><h4 id="a-修改当时生效"><a href="#a-修改当时生效" class="headerlink" title="a. 修改当时生效"></a>a. 修改当时生效</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostname heyouhao</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+<h4 id="b-修改后重启生效"><a href="#b-修改后重启生效" class="headerlink" title="b. 修改后重启生效"></a>b. 修改后重启生效</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysconfig/network</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+<h4 id="c-主机名映射"><a href="#c-主机名映射" class="headerlink" title="c. 主机名映射"></a>c. 主机名映射</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/hosts</span><br><span class="line">127.0.0.1   pseudoStudy</span><br></pre></td></tr></table></figure>
+
+<h3 id="克隆linux系统注意"><a href="#克隆linux系统注意" class="headerlink" title="克隆linux系统注意"></a>克隆linux系统注意</h3><h4 id="a-在-etc-udev-rules-d-70-persistent-net-rules文件里把原eth0的相关信息删除，将eth1的name改为eth0"><a href="#a-在-etc-udev-rules-d-70-persistent-net-rules文件里把原eth0的相关信息删除，将eth1的name改为eth0" class="headerlink" title="a. 在/etc/udev/rules.d/70-persistent-net.rules文件里把原eth0的相关信息删除，将eth1的name改为eth0"></a>a. 在/etc/udev/rules.d/70-persistent-net.rules文件里把原eth0的相关信息删除，将eth1的name改为eth0</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@pseudo /]$ sudo vi /etc/udev/rules.d/70-persistent-net.rules</span><br></pre></td></tr></table></figure>
+
+<h4 id="b-将-etc-sysconfig-network-scripts-ifcfg-eth0-里面的mac地址改为上面eth0的mac地址"><a href="#b-将-etc-sysconfig-network-scripts-ifcfg-eth0-里面的mac地址改为上面eth0的mac地址" class="headerlink" title="b. 将/etc/sysconfig/network-scripts/ifcfg-eth0 里面的mac地址改为上面eth0的mac地址"></a>b. 将/etc/sysconfig/network-scripts/ifcfg-eth0 里面的mac地址改为上面eth0的mac地址</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@pseudo /]$ sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0</span><br></pre></td></tr></table></figure>
+
+<h4 id="c-重启"><a href="#c-重启" class="headerlink" title="c. 重启"></a>c. 重启</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@pseudo /]$ sudo reboot</span><br></pre></td></tr></table></figure>
+
+<h3 id="ip地址修改"><a href="#ip地址修改" class="headerlink" title="ip地址修改"></a>ip地址修改</h3><h4 id="a-进入vi设置ip地址"><a href="#a-进入vi设置ip地址" class="headerlink" title="a. 进入vi设置ip地址"></a>a. 进入vi设置ip地址</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-eth0</span><br></pre></td></tr></table></figure>
+
+<h4 id="b-修改内容"><a href="#b-修改内容" class="headerlink" title="b. 修改内容"></a>b. 修改内容</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">BOOTPROTO=&quot;static&quot;   #dhcp改为static  </span><br><span class="line">ONBOOT=&quot;yes&quot;           #开机启用本配置  </span><br><span class="line">IPADDR=192.168.1.81   #静态IP  </span><br><span class="line">GATEWAY=192.168.1.2    #默认网关  </span><br><span class="line">NETMASK=255.255.255.0  #子网掩码  </span><br><span class="line">DNS1=210.21.4.130       #DNS 配置 </span><br><span class="line">IPV4_FAILURE_FATAL=yes</span><br><span class="line">IPV6INIT=no</span><br><span class="line">NAME=&quot;System eth0&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="c-重启网卡生效"><a href="#c-重启网卡生效" class="headerlink" title="c. 重启网卡生效"></a>c. 重启网卡生效</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service network restart</span><br></pre></td></tr></table></figure>
+
+<h3 id="jdk卸载安装"><a href="#jdk卸载安装" class="headerlink" title="jdk卸载安装"></a>jdk卸载安装</h3><h4 id="a-查看jdk默认安装情况"><a href="#a-查看jdk默认安装情况" class="headerlink" title="a. 查看jdk默认安装情况"></a>a. 查看jdk默认安装情况</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@pseudoStudy ~]# java -version</span><br><span class="line">java version &quot;1.7.0_09-icedtea&quot;</span><br><span class="line">OpenJDK Runtime Environment (rhel-2.3.4.1.el6_3-x86_64)</span><br><span class="line">OpenJDK 64-Bit Server VM (build 23.2-b09, mixed mode)</span><br></pre></td></tr></table></figure>
+
+<h4 id="b-卸载自带jdk"><a href="#b-卸载自带jdk" class="headerlink" title="b. 卸载自带jdk"></a>b. 卸载自带jdk</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@pseudoStudy ~]# rpm -qa|grep java               //查看</span><br><span class="line">java-1.6.0-openjdk-1.6.0.0-1.50.1.11.5.el6_3.x86_64</span><br><span class="line">tzdata-java-2012j-1.el6.noarch</span><br><span class="line">java-1.7.0-openjdk-1.7.0.9-2.3.4.1.el6_3.x86_64</span><br><span class="line">[root@pseudoStudy ~]# rpm -e --nodeps java-1.6.0-openjdk-1.6.0.0-1.50.1.11.5.el6_3.x86_64   //卸载</span><br><span class="line">[root@pseudoStudy ~]# rpm -e --nodeps tzdata-java-2012j-1.el6.noarch java-1.7.0-openjdk-1.7.0.9-2.3.4.1.el6_3.x86_64      //卸载</span><br></pre></td></tr></table></figure>
+
+<h4 id="c-新建softwares目录，将jdk安装压缩包到softwares目录下"><a href="#c-新建softwares目录，将jdk安装压缩包到softwares目录下" class="headerlink" title="c. 新建softwares目录，将jdk安装压缩包到softwares目录下"></a>c. 新建softwares目录，将jdk安装压缩包到softwares目录下</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@fyd01 opt]$ sudo mkdir softwares</span><br></pre></td></tr></table></figure>
+
+<h4 id="d-解压安装"><a href="#d-解压安装" class="headerlink" title="d. 解压安装"></a>d. 解压安装</h4><h4 id="e-配置JAVA-HOME环境变量"><a href="#e-配置JAVA-HOME环境变量" class="headerlink" title="e. 配置JAVA_HOME环境变量"></a>e. 配置JAVA_HOME环境变量</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@pseudoStudy jdk1.7.0_67]# pwd</span><br><span class="line">/opt/modules/jdk1.7.0_67</span><br><span class="line">[root@pseudoStudy jdk1.7.0_67]# vim /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p>添加内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/opt/modules/jdk1.7.0_67</span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH</span><br><span class="line">export CLASSPATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br></pre></td></tr></table></figure>
+
+<p>刷新测试</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@pseudoStudy jdk1.7.0_67]# source /etc/profile</span><br><span class="line">[root@pseudoStudy jdk1.7.0_67]# java -version</span><br><span class="line">java version &quot;1.7.0_67&quot;</span><br><span class="line">Java(TM) SE Runtime Environment (build 1.7.0_67-b01)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 24.65-b04, mixed mode)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Hadoop准备"><a href="#Hadoop准备" class="headerlink" title="Hadoop准备"></a>Hadoop准备</h3><h4 id="a-创建hadoop用户"><a href="#a-创建hadoop用户" class="headerlink" title="a. 创建hadoop用户"></a>a. 创建hadoop用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@pseudoStudy jdk1.7.0_67]# useradd hadoop</span><br><span class="line">[root@pseudoStudy jdk1.7.0_67]# passwd hadoop</span><br></pre></td></tr></table></figure>
+
+<h4 id="b-给hadoop用户设置sudo权限"><a href="#b-给hadoop用户设置sudo权限" class="headerlink" title="b. 给hadoop用户设置sudo权限"></a>b. 给hadoop用户设置sudo权限</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@pseudoStudy jdk1.7.0_67]# ll /etc/sudoers</span><br><span class="line">-r--r-----. 1 root root 4002 Mar  2  2012 /etc/sudoers</span><br><span class="line">[root@pseudoStudy jdk1.7.0_67]# chmod 640 /etc/sudoers</span><br><span class="line">[root@pseudoStudy jdk1.7.0_67]# ll /etc/sudoers</span><br><span class="line">-rw-r-----. 1 root root 4002 Mar  2  2012 /etc/sudoers</span><br><span class="line">[root@pseudoStudy jdk1.7.0_67]# vi /etc/sudoers</span><br></pre></td></tr></table></figure>
+
+<p>添加内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop  ALL=(root)NOPASSWD:ALL</span><br></pre></td></tr></table></figure>
+
+<h4 id="c-创建目录，进入-opt-modules-目录，创建-hadoop子目录"><a href="#c-创建目录，进入-opt-modules-目录，创建-hadoop子目录" class="headerlink" title="c. 创建目录，进入/opt/modules 目录，创建 hadoop子目录"></a>c. 创建目录，进入/opt/modules 目录，创建 hadoop子目录</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@fyd01 opt]$ sudo mkdir modules</span><br><span class="line">[hadoop@fyd01 opt]$ sudo mkdir tools</span><br><span class="line">[hadoop@fyd01 opt]$ sudo mkdir datas</span><br><span class="line">[hadoop@fyd01 opt]$ ls</span><br><span class="line">datas  modules  softwares  tools</span><br><span class="line">[hadoop@fyd01 modules]# sudo mkdir hadoop</span><br><span class="line">[hadoop@fyd01 modules]# sudo chown -R hadoop:hadoop hadoop/</span><br></pre></td></tr></table></figure>
+
+<h4 id="d-解压hadoop文件"><a href="#d-解压hadoop文件" class="headerlink" title="d. 解压hadoop文件"></a>d. 解压hadoop文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@fyd01 softwares]# tar -zxvf hadoop-2.5.0.tar.gz  -C /opt/modules/hadoop/</span><br></pre></td></tr></table></figure>
+
+<h4 id="e-防火墙关闭"><a href="#e-防火墙关闭" class="headerlink" title="e.防火墙关闭"></a>e.防火墙关闭</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service iptables status   //查看防火墙状态</span><br><span class="line">service iptables stop</span><br><span class="line">chkconfig iptables off    //启动关闭防火墙</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -185,289 +253,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/02/190802-centos-hadoop/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/190802-centos-command/" class="archive-article-date">
-  	<time datetime="2019-08-02T00:55:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/02/190802-centos-command/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">centOS 硬件信息查看</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/190802-centos-command/">centOS 硬件信息查看</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/190802-hadoop-designPatterns/" class="archive-article-date">
-  	<time datetime="2019-08-02T00:35:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/190802-hadoop-designPatterns/">设计模式六大原则</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/190802-hadoop-compile/" class="archive-article-date">
-  	<time datetime="2019-08-02T00:30:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/190802-hadoop-compile/">编译 Hadoop 2.x 源码</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/190802-hadoop-pseudo/" class="archive-article-date">
-  	<time datetime="2019-08-02T00:25:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/190802-hadoop-pseudo/">Hadoop2.x伪分布式环境搭建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/01/190801-spring-mvc/" class="archive-article-date">
-  	<time datetime="2019-08-01T09:53:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/01/190801-spring-mvc/">SpringMVC利用AOP实现自定义注解记录日志</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">spring mvc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/01/190801-eclipse-tags/" class="archive-article-date">
-  	<time datetime="2019-08-01T05:25:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/01/190801-eclipse-tags/">eclipse 标记任务</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">eclipse</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/01/190801-java/" class="archive-article-date">
-  	<time datetime="2019-08-01T05:17:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/01/190801-java/">java 元注解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -490,8 +375,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
