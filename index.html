@@ -164,11 +164,6 @@
       
         <p>工作需要记录接口日志情况,默认spring mvc已配置可用<br>maven 添加jar</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;javax.servlet&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;s</span><br><span class="line">    &lt;version&gt;$&#123;servlet&#125;&lt;/version&gt;</span><br><span class="line">    &lt;scope&gt;compile&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.aspectj&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;1.6.10&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;aspectj&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;aspectjrt&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;1.5.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-
-<p>spring-mvc.xml配置添加</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 最重要:::如果放在spring-context.xml中，这里的aop设置将不会生效 --&gt;</span><br><span class="line">&lt;aop:aspectj-autoproxy proxy-target-<span class="class"><span class="keyword">class</span></span>=<span class="string">"true"</span>/&gt;</span><br></pre></td></tr></table></figure>
-
-<p>自定义注解</p>
         
           <a class="article-more-a" href="/2019/08/01/190801-spring-mvc/#more">more >></a>
         
@@ -249,8 +244,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="eclipse-Task-Tags"><a href="#eclipse-Task-Tags" class="headerlink" title="eclipse Task Tags:"></a>eclipse Task Tags:</h3><p><strong>TODO</strong> -用来提醒该标识处的代码有待返回继续编写、更新或者添加。该标签通常在注释块的源文件顶部。<br><strong>FIXME</strong> -该标签用来提醒你代码中存在稍后某个时间需要修改的部分<br><strong>XXX</strong> -需要改进的功能</p>
-<h3 id="自定义任务标记：（如：HEYH）"><a href="#自定义任务标记：（如：HEYH）" class="headerlink" title="自定义任务标记：（如：HEYH）"></a>自定义任务标记：（如：HEYH）</h3><p>window–&gt;preferences–&gt;java–&gt;compiler–&gt;tags<br><img src="http://www.heyouhao.cn/images/7902846489382879.jpg" alt="eclipse添加标记"></p>
-<p>eclipse 项目中添加HEYH示例：</p>
         
           <a class="article-more-a" href="/2019/08/01/190801-eclipse-tags/#more">more >></a>
         
@@ -328,9 +321,6 @@
       
         <p>java中元注解有四个： @Retention @Target @Document @Inherited；</p>
 <p>@Retention：注解的保留位置　　　　　　　　　<br>　@Retention(RetentionPolicy.SOURCE)   //注解仅存在于源码中，在class字节码文件中不包含<br>　@Retention(RetentionPolicy.CLASS)     // 默认的保留策略，注解会在class字节码文件中存在，但运行时无法获得，<br>　@Retention(RetentionPolicy.RUNTIME)  // 注解会在class字节码文件中存在，在运行时可以通过反射获取到</p>
-<p>　　<br>@Target:注解的作用目标<br>　@Target(ElementType.TYPE)   //接口、类、枚举、注解<br>　@Target(ElementType.FIELD) //字段、枚举的常量<br>　@Target(ElementType.METHOD) //方法<br>　@Target(ElementType.PARAMETER) //方法参数<br>　@Target(ElementType.CONSTRUCTOR)  //构造函数<br>　@Target(ElementType.LOCAL_VARIABLE)//局部变量<br>　@Target(ElementType.ANNOTATION_TYPE)//注解<br>　@Target(ElementType.PACKAGE) ///包   </p>
-<p>@Document：说明该注解将被包含在javadoc中</p>
-<p>@Inherited：说明子类可以继承父类中的该注解</p>
         
           <a class="article-more-a" href="/2019/08/01/190801-java/#more">more >></a>
         
@@ -479,11 +469,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color3">eclipse</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">eclipse</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
